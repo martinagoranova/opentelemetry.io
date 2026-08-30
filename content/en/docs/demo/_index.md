@@ -6,78 +6,34 @@ cascade:
 weight: 180
 ---
 
-Welcome to the [OpenTelemetry Demo](/ecosystem/demo/) documentation, which
-covers how to install and run the demo, and some scenarios you can use to view
-OpenTelemetry in action.
+The OpenTelemetry Demo is a microservice-based distributed system designed to demonstrate OpenTelemetry in a near real-world environment. 
 
-## Running the Demo
+This project serves three main purposes:
+* **Demonstration:** Provides a realistic example of instrumentation and observability in action.
+* **Integration:** Builds a base for vendors and tool authors to test their OpenTelemetry integrations.
+* **Testing:** Creates a living environment for contributors to validate new versions of the API, SDK, and components.
 
-Want to deploy the demo and see it in action? Start here.
+To explore the demo or customize it for your needs, follow the technical workflow below:
 
-- [Docker](docker-deployment/)
-- [Kubernetes](kubernetes-deployment/)
+### 1. Getting Started & Installation
+Before running the application, review the environment prerequisites and installation steps.
+* **[Requirements](requirements/)** – System, application, and telemetry specifications.
+* **[Docker Deployment](docker-deployment/)** – Steps for quick local setup.
+* **[Kubernetes Deployment](kubernetes-deployment/)** – Steps for cloud and cluster deployments.
 
-## Language Feature Reference
+### 2. Architecture & Design
+Understand how the services interact and how telemetry data flows through the system.
+* **[Architecture](architecture/)** – Global overview of the microservices ecosystem.
+* **[Collector Data Flow](collector-data-flow/)** – Visual representation of data routing.
+* **[Services](services/)** – Detailed breakdown of each individual microservice.
 
-Want to understand how a particular language's instrumentation works? Start
-here.
+### 3. Features & Use Cases
+See OpenTelemetry features in action and learn how to trigger specific scenarios.
+* **[Telemetry Features](telemetry-features/)** – Overview of implemented traces, metrics, and logs.
+* **[Feature Flags](feature-flags/)** – Instructions for simulating system errors and memory leaks.
 
-| Language   | Automatic Instrumentation                                                                                                                                | Instrumentation Libraries                                                                    | Manual Instrumentation                                                                       |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| .NET       | [Accounting Service](services/accounting/)                                                                                                               | [Cart Service](services/cart/)                                                               | [Cart Service](services/cart/)                                                               |
-| C++        |                                                                                                                                                          |                                                                                              | [Currency Service](services/currency/)                                                       |
-| Elixir     |                                                                                                                                                          | [Flagd-UI Service](services/flagd-ui/)                                                       |                                                                                              |
-| Go         |                                                                                                                                                          | [Checkout Service](services/checkout/), [Product Catalog Service](services/product-catalog/) | [Checkout Service](services/checkout/), [Product Catalog Service](services/product-catalog/) |
-| Java       | [Ad Service](services/ad/)                                                                                                                               |                                                                                              | [Ad Service](services/ad/)                                                                   |
-| JavaScript | [Payment Service](services/payment/)                                                                                                                     |                                                                                              | [Payment Service](services/payment/)                                                         |
-| TypeScript |                                                                                                                                                          | [Frontend](services/frontend/), [React Native App](services/react-native-app/)               | [Frontend](services/frontend/)                                                               |
-| Kotlin     |                                                                                                                                                          | [Fraud Detection Service](services/fraud-detection/)                                         |                                                                                              |
-| PHP        |                                                                                                                                                          | [Quote Service](services/quote/)                                                             | [Quote Service](services/quote/)                                                             |
-| Python     | [Recommendation Service](services/recommendation/), [Agent Service](services/agent/), [Chatbot Service](services/chatbot/), [MCP Service](services/mcp/) |                                                                                              | [Recommendation Service](services/recommendation/)                                           |
-| Ruby       |                                                                                                                                                          | [Email Service](services/email/)                                                             | [Email Service](services/email/)                                                             |
-| Rust       |                                                                                                                                                          | [Shipping Service](services/shipping/)                                                       | [Shipping Service](services/shipping/)                                                       |
+### 4. Advanced & Development
+Resources for modifying the source code and contributing to the project.
+* **[Development](development/)** – How to set up a local development environment.
+* **[Tests](tests/)** – Running automated tests against the deployment.
 
-## Service Documentation
-
-Specific information about how OpenTelemetry is deployed in each service can be
-found here:
-
-- [Accounting Service](services/accounting/)
-- [Ad Service](services/ad/)
-- [Agent Service](services/agent/)
-- [Cart Service](services/cart/)
-- [Chatbot Service](services/chatbot/)
-- [Checkout Service](services/checkout/)
-- [Email Service](services/email/)
-- [Frontend](services/frontend/)
-- [Load Generator](services/load-generator/)
-- [MCP Service](services/mcp/)
-- [Payment Service](services/payment/)
-- [Product Catalog Service](services/product-catalog/)
-- [Quote Service](services/quote/)
-- [Recommendation Service](services/recommendation/)
-- [Shipping Service](services/shipping/)
-- [Image Provider Service](services/image-provider/)
-- [React Native App](services/react-native-app/)
-
-## Feature Flag Scenarios
-
-How can you solve problems with OpenTelemetry? These
-[feature flag enabled scenarios](feature-flags/) walk you through some
-pre-configured problems and show you how to interpret OpenTelemetry data to
-solve them.
-
-## Reference
-
-Project reference documentation, like requirements and feature matrices.
-
-- [Architecture](architecture/)
-- [Development](development/)
-- [Feature Flags Reference](feature-flags/)
-- [Metric Feature Matrix](telemetry-features/metric-coverage/)
-- [Requirements](./requirements/)
-- [Screenshots](screenshots/)
-- [Services](services/)
-- [Span Attributes Reference](telemetry-features/manual-span-attributes/)
-- [Tests](tests/)
-- [Trace Feature Matrix](telemetry-features/trace-coverage/)
