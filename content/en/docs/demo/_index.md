@@ -26,6 +26,7 @@ Understand how the services interact and how telemetry data flows through the sy
 * **[Architecture](architecture/)** – Global overview of the microservices ecosystem.
 * **[Collector Data Flow](collector-data-flow/)** – Visual representation of data routing.
 * **[Services](services/)** – Detailed breakdown of each individual microservice.
+* **[Language Feature Reference](language-reference/)** – Matrix of instrumentation types by programming language.
 
 ### 3. Features & Use Cases
 See OpenTelemetry features in action and learn how to trigger specific scenarios.
